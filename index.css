@@ -1,0 +1,98 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div {
+    width: 200px;
+    height: 190px;
+    border: 1px solid #000;
+    display: grid;
+    place-content: center;
+}
+
+div:first-child {
+    background-color: dodgerblue;
+    /* transform: translateX(-50%); */
+    /* transform: rotateX(180deg); */
+    /* transform: scaleX(120%); */
+    transform: skewX(-10deg);
+}
+div:nth-child(2) {
+    background-color: yellow;
+    /* transform: translateY(-2rem); */
+    /* transform: rotateY(45deg); */
+    /* transform: scaleY(120%); */
+    transform: skewY(10deg);
+}
+div:last-child {
+    background-color: limegreen;
+    /* transform: translate(100%, -5rem); */
+    /* transform: rotateZ(90deg); */
+    /* transform: scale(50%, 50%); */
+    transform: skew(-10deg, -10deg);
+}
+
+
+main + p {
+    font-family: serif;
+    text-transform: capitalize;
+}
+
+
+
+/* table, tr, th, td, caption {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.5rem;
+} */
+
+/* Base styles */
+.video-wrapper {
+    max-width: 1800px;
+    margin: 2rem auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.video-wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    outline: none;
+    background-color: #000;
+    /* fallback for posterless videos */
+    border-radius: 16px;
+
+}
